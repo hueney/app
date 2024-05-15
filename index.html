@@ -113,5 +113,10 @@ function carousel() {
 </BR>
 </BR>
 <iframe name="player" src="player/player.html" width="100%" style="position: fixed; left: 0; bottom: 0; right: 0; width: 100%; height: 62px; border:none;"></iframe>
+<script>
+  if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('sw.js')
+  }
+</script>
 </body>
 </html>
