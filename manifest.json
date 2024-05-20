@@ -1,0 +1,22 @@
+{
+  "name": "HUENEY RADIO",
+  "short_name": "HUENEY FM",
+  "theme_color": "#5e2760",
+  "background_color": "#5e2760",
+  "display": "standalone",
+  "Scope": "/",
+  "start_url": "https://hueney.github.io/app/",
+  "icons": [
+   {
+    "src": "img/icon_192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+   },
+   {
+    "src": "./img/icon_512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+   }
+  ],
+  "splash_pages": null
+}

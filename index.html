@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json"><!-- Cargando manifiesto
+  -->
+    <title>HUENEY Radio APP</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<script src="https://kit.fontawesome.com/bb487193c2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@600&display=swap" rel="stylesheet">
+    <link rel="manifest" href="./manifest.json">
+<!-- Soporte para iOS -->
+    <link rel="apple-touch-icon" href="./img/icon-72x72.png" />
+    <link rel="apple-touch-icon" href="./img/icon_96.png" />
+    <link rel="apple-touch-icon" href="./img/icon_128.png" />
+    <link rel="apple-touch-icon" href="./img/icon_512.png" />
+    <link rel="apple-touch-icon" href="./img/icon_192.png" />
+    <link rel="apple-touch-icon" href="./img/icon_384.png" />
+    <link rel="apple-touch-icon" href="./img/icon_512.png" />
+    <meta name="apple-mobile-web-app-status-bar" content="#5e2760" />
+    <meta name="theme-color" content="#5e2760" />
+	<meta name="description" content="Bienvenid@s a la web PWA proporcionada por Hueney Radio... :)">
+</head>
+<body>
+<div class="logo">
+  <a href="player/player.html" target="player">
+  <figure class="imglogo">
+  <img src="img/logo.avif" alt="Logo">
+		Toca para escuchar</BR>nuestra señal en vivo
+  </figure>
+  </a>
+</div>
+<div class="boton1">
+    <button id="InstallBtn" style="display:none">instalar app</button>
+</div>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+      .then((reg) => { console.log('SW registered.', reg); });
+  }
+</script>
+<script>
+  //Registre un botón para mostrar en lugar de un banner
+  registerInstallAppEvent(document.getElementById("InstallBtn"));
+
+  //Función para cancelar la visualización del banner y registrar el elemento DOM para mostrarlo en su lugar
+  //Argumento 1: HTMLElement para registrar el evento
+  function registerInstallAppEvent(elem){
+    //Secuestra el evento cuando se cumplen las condiciones de visualización del banner de instalación
+    window.addEventListener('beforeinstallprompt', function(event){
+      console.log("beforeinstallprompt: ", event);
+      event.preventDefault(); //Cancelar visualización de banner
+      elem.promptEvent = event; //event quédatelo
+      elem.style.display = "block"; //elemento de visualización
+      return false;
+    });
+    //Procesamiento de visualización del cuadro de diálogo de instalación
+    function installApp() {
+      if(elem.promptEvent){
+        elem.promptEvent.prompt(); //Pantalla de diálogo
+        elem.promptEvent.userChoice.then(function(choice){
+          elem.style.display = "none";
+          elem.promptEvent = null; //Solo se puede usar una vez, así que límpielo después.
+          location.href="https://hueney.github.io/app/" 
+        });//end then
+      }
+    }//end installApp
+    //Agregar evento para mostrar el cuadro de diálogo
+    elem.addEventListener("click", installApp);
+  }//end registerInstallAppEvent	
+</script>
+<!-- PROGRAMACION -->
+<h1 class="publicidad">PROGRAMACION</h1>
+<div class="carrusel">
+  <a href="#" target="_new"><img class="mySlides" src="img/folclore.avif" alt="la mañana nacional" style="width:90%"></a>
+  <a href="#" target="_new"><img class="mySlides" src="img/diario.avif" alt="party diario" style="width:90%"></a>
+  <a href="#" target="_new"><img class="mySlides" src="img/culbrutal.avif" alt="Cultura brutal" style="width:90%"></a>
+  <a href="#" target="_new"><img class="mySlides" src="img/noche.avif" alt="la noche de los lentos" style="width:90%"></a>
+  <a href="#" target="_new"><img class="mySlides" src="img/finde.avif" alt="finde electronico" style="width:90%"></a>
+</div>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 5000); // Cambia imagen cada 5 segs
+}
+</script>
+<!-- ANUNCIANTES -->
+<h1 class="publicidad">ANUNCIANTES</h1>
+<div class="anuncio-contenedor">
+  <a href="https://wa.me/542995032715" target="_new">
+    <figure class="anuncio-item">
+    <img src="img/leo.avif" alt="">
+      Toca para contactar
+    </figure>
+  </a>  
+  <a href="https://wa.me/542994087265" target="_new">
+    <figure class="anuncio-item">
+    <img src="img/ines.avif" alt="">
+      Toca para contactar
+    </figure>
+  </a>
+  <a href="https://wa.me/542994204901?text=info" target="_new">
+    <figure class="anuncio-item">
+    <img src="img/vivi.avif" alt="">
+      Toca para contactar
+    </figure>
+  </a>
+  <a href="https://wa.me/542994204810?text=Quiero una canción" target="_new">
+    <figure class="anuncio-item">
+    <img src="img/pedidos.avif" alt="">
+      Toca para contactar
+    </figure>
+  </a>
+  <a href="#" target="_new">
+    <figure class="anuncio-item">
+    <img src="img/4.avif" alt="">
+      Toca para contactar
+    </figure>
+  </a>
+  
+</div>
+<div>
+ <section class="socials">
+      <a href="https://radiohueney.com.ar/" target="_blank"><i class="fa-solid fa-globe"></i></a>
+      <a href="https://twitter.com/hueney_" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://instagram.com/hueney_" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a id="share-button"><i class="fa-solid fa-share-nodes"></i></a>
+    </section>
+	</div>
+</BR>
+</BR>
+</BR>
+</BR>
+</BR>
+</BR>
+<iframe name="player" src="player/player.html" width="100%" style="position: fixed; left: 0; bottom: 0; right: 0; width: 100%; height: 62px; border:none;"></iframe>
+</body>
+</html>

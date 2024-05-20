@@ -1,0 +1,215 @@
+@keyframes preloader {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+* {
+  animation: preloader 1s ease-in-out;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-image: url("img/bg.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  text-align: center;
+}
+
+.logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 100%;
+  flex-wrap: wrap;
+}
+
+.imglogo {
+  padding: 20px;
+  min-width: 200px;
+  max-width: 200px;
+  overflow: hidden;
+  img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    border-radius: 50%;
+   /* background-image: linear-gradient(to bottom, #fff, #ddd);*/
+    box-shadow: 0 0 10px 2px rgba(28,19,100, 0.6);
+    background: linear-gradient(-45deg, #1c1364, #F20A08);
+    background-size: 400% 400%;
+
+    -webkit-animation: gradient 5s ease infinite;
+    -moz-animation: gradient 5s ease infinite;
+    -o-animation: gradient 5s ease infinite;
+    animation: gradient 5s ease infinite;
+  }
+  
+}
+
+@-webkit-keyframes gradient {
+  0%{background-position:18% 0%}
+  50%{background-position:83% 100%}
+  100%{background-position:18% 0%}
+}
+@-moz-keyframes gradient {
+  0%{background-position:18% 0%}
+  50%{background-position:83% 100%}
+  100%{background-position:18% 0%}
+}
+@-o-keyframes gradient {
+  0%{background-position:18% 0%}
+  50%{background-position:83% 100%}
+  100%{background-position:18% 0%}
+}
+@keyframes gradient {
+  0%{background-position:18% 0%}
+  50%{background-position:83% 100%}
+  100%{background-position:18% 0%}
+
+}
+
+.menu-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 100%;
+  flex-wrap: wrap;
+}
+
+.menu-item {
+  box-shadow: 0 0 10px 2px rgba(28,19,100, 0.6);
+  border-radius: 10px;
+  margin: 2px;
+  min-width: 100px;
+  max-width: 100px;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom, #fff, #ddd);
+  img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+}
+
+.anuncio-contenedor {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 100%;
+  flex-wrap: wrap;
+}
+
+.anuncio-item {
+  box-shadow: 0 0 10px 2px rgba(0, 0, 255, 0.6);
+  border-radius: 10px;
+  margin: 2px;
+  min-width: 300px;
+  max-width: 300px;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom, #fff, #ddd);
+ img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: bottom;
+}
+}
+
+.gallery-item figcaption {
+	text-shadow: 2px 2px 3px rgba(255,255,255,0.8);
+	padding: 5px;
+	font-size: 1em;
+	color: #1c1364;
+	font-family: Roboto Condensed;
+	border-radius: 10px;
+	width: auto;
+}
+ 
+ a {
+	text-decoration: none;
+	text-shadow: 2px 2px 3px rgba(255,255,255,0.8);
+	padding: 5px;
+	font-size: 1em;
+	color: #1c1364;
+	font-family: Roboto Condensed;
+	border-radius: 10px;
+	width: auto;
+ }
+
+ a:hover {
+	text-decoration: none;
+	text-shadow: 2px 2px 3px rgba(255,255,255,0.8);
+	padding: 5px;
+	font-size: 1em;
+	color: #ffb402;
+	font-family: Roboto Condensed;
+	border-radius: 10px;
+	width: auto;
+ }
+
+ .publicidad {
+	text-decoration: none;
+	text-shadow: 2px 2px 3px rgba(255,255,255,0.8);
+	padding: 8px;
+	font-size: 1em;
+	color: #1c1364;
+	font-family: Roboto Condensed;
+	border-radius: 10px;
+	width: auto;
+ }
+
+ .mySlides {
+  display: none;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 255, 0.6);
+  border-radius: 10px;
+  margin: auto;
+}
+
+ .carrusel {
+  margin: auto;
+  max-width: 600px;
+ }
+ 
+ 
+.socials {
+  margin: 3vh 0;
+  padding: 5vh 0 0 0;
+  height: 6vh;
+  text-align: center;
+  color: var(--pureBlack);
+  font-size: 5vh;
+  vertical-align: middle;
+}
+
+.socials a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--pureBlack);
+}
+
+.boton1 {
+  text-decoration: none;
+	text-shadow: 2px 2px 3px rgba(255,255,255,0.8);
+	padding: 8px;
+	font-size: 1em;
+	color: #1c1364;
+	font-family: Roboto Condensed;
+	border-radius: 10px;
+	width: auto;
+  margin-left: 40%;
+  max-width: auto;
+ }
+
+
+ 
