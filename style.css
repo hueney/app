@@ -200,10 +200,10 @@ body {
 
 .boton1 {
   text-decoration: none;
-	text-shadow: 2px 2px 3px rgba(255,255,255,0.8);
+	text-shadow: 2px 2px 3px rgba(169, 170, 170, 0.8);
 	padding: 8px;
-	font-size: 1em;
-	color: #1c1364;
+	font-size: 1.5em;
+	color: hsl(0, 95%, 46%);
 	font-family: Roboto Condensed;
 	border-radius: 10px;
 	width: auto;
