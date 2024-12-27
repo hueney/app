@@ -1,22 +1,57 @@
 {
-  "name": "HUENEY RADIO",
-  "short_name": "HUENEY FM",
-  "theme_color": "#ffb600",
-  "background_color": "#ffb600",
-  "display": "standalone",
-  "Scope": "/",
-  "start_url": "https://hueney.github.io/app/",
+  "name": "Hueney fm ",
+  "short_name": "Hueney radio",
+  "description": "La mejor musica tropical!",
   "icons": [
-   {
-    "src": "img/icon_192.png",
-    "sizes": "192x192",
-    "type": "image/png"
-   },
-   {
-    "src": "./img/icon_512.png",
-    "sizes": "512x512",
-    "type": "image/png"
-   }
+    {
+      "src": "assets/hueney_cover.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "assets/hueney_cover.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
   ],
-  "splash_pages": null
+  "start_url": "./?mode=pwa",
+  "theme_color": "#FFF",
+  "background_color": "#FFF", 
+  "orientation": "any", 
+  "display": "standalone", 
+  "display_override": [
+    "standalone"
+  ],
+  "lang": "es-AR", 
+  "dir": "ltr",
+  "categories": [
+    "music"
+  ],
+  "screenshots": [
+    {
+      "src": "assets/hueney_cover.png",
+      "type": "image/png",
+      "sizes": "540x720",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "assets/hueney_cover.png",
+      "type": "image/png",
+      "sizes": "540x720",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "assets/hueney_cover.png",
+      "type": "image/png",
+      "sizes": "720x540",
+      "form_factor": "wide"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "#",
+      "id": "#"
+    }
+  ]
 }
