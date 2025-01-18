@@ -218,7 +218,7 @@
       
         try {
           // 1. Tenta buscar na sua API PHP primeiro
-          const response = await fetch(`https://twj.es/api/getMusicInfo.php?artist=${encodeURIComponent(artist)}&title=${encodeURIComponent(title)}&service=${server}`);
+          const response = await fetch(`?artist=${encodeURIComponent(artist)}&title=${encodeURIComponent(title)}&service=${server}`);
       
           if (response.ok) {
             dataFrom = await response.json();
